@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/8fcefa151b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- --------------------Navbar------------------------------- -->
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-top">
+            <div class="logo">
+                <img src="Images/logo.png" width="125px" alt="MY logo">
+            </div>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search by product title">
+            </div>
+            <a class="Login-btn">Login</a>
+            <img src="Images/menu.png" class="menu-icon" onclick="menuToggle1()">
+        </div>
+        <div class="navbar-bottom">
+            <!-- Courses dropdown -->
+            <div class="dropdown courses-dropdown">
+                <a href="#">Courses <i class="fa-solid fa-angle-down"></i></a>
+                <!-- Dropdown content -->
+                <div class="dropdown-content">
+                    <div class="details">
+                        <div class="leftdetails">
+                            <ul id="detailsul">
+                                <li onclick="showContent(1)">
+                                    <img style="width: 45px;"
+                                         src="Images/data-science.svg"
+                                         alt="">
+                                    Data Science & Analytics
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </li>
+                                <li onclick="showContent(2)">
+                                    <img style="width: 45px;"
+                                         src="Images/software-development.svg"
+                                         alt="">
+                                    Software Development Courses
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </li>
+                                <li onclick="showContent(3)">
+                                    <img style="width: 45px;"
+                                         src="Images/Banking.svg"
+                                         alt="">
+                                    Banking & Finance
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </li>
+                                <li onclick="showContent(4)">
+                                    <img style="width: 45px;"
+                                         src="Images/programming-c.svg"
+                                         alt="">
+                                    Programming Courses
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </li>
+                                <li onclick="showContent(5)">
+                                    <img style="width: 45px;"
+                                         src="Images/Business-t.svg">
+                                    Business Technology
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </li>
+                                <li onclick="showContent(6)">
+                                    <img style="width: 45px;"
+                                         src="Images/pw-school-health.svg"
+                                         alt="">
+                                    PW School of Healthcare
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+                         <!-- Right side content -->
+                        <div id="rightContentContainer">
+                            <!-- Content for each li -->
+                            <div class="rightdetails" id="rightContent1" style="display: none;">
+                                <div class="rightcont">
+                                    <div class="righttop">
+                                        <ul id="righttop">
+                                            <li style="text-decoration: underline;">Paid</li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightmiddle">
+                                        <ul id="rightmiddleul">
+                                            <li>
+                                                <img src="Images/dropcourse1.jpeg">
+                                                Data Science With Generative AI Course
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse2.jpeg">
+                                                Data Analytics Course-Beginners
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse4.jpeg">
+                                                Mastering Artificial Intelligence Course
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse3.jpeg">
+                                                Data Science With Generative AI Course
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse5.jpeg">
+                                                Data Analytics Course  Hinglish
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightbottom">
+                                        <a href="#" style="color: #ff6900; text-decoration: underline;">All Courses <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rightdetails" id="rightContent2" style="display: none;">
+                                <div class="rightcont">
+                                    <div class="righttop">
+                                        <ul id="righttop">
+                                            <li style="text-decoration: underline;">Paid</li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightmiddle">
+                                        <ul id="rightmiddleul">
+                                            <li>
+                                                <img src="Images/dropcourse1.jpeg">
+                                                Full Stack Development Course
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse4.jpeg">
+                                                Python for Software Engineers
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse3.jpeg">
+                                                Backend Development with Node.js
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse5.jpeg">
+                                                Software Design Patterns
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightbottom">
+                                        <a href="#" style="color: #ff6900; text-decoration: underline;">All Courses <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rightdetails" id="rightContent3" style="display: none;">
+                                <div class="rightcont">
+                                    <div class="righttop">
+                                        <ul id="righttop">
+                                            <li style="text-decoration: underline;">Paid</li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightmiddle">
+                                        <ul id="rightmiddleul">
+                                            <li>
+                                                <img src="Images/dropcourse5.jpeg">
+                                                Investment Banking Essentials
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse2.jpeg">
+                                                Financial Modeling and Analysis
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse4.jpeg">
+                                                Wealth Management Strategies
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightbottom">
+                                        <a href="#" style="color: #ff6900; text-decoration: underline;">All Courses <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rightdetails" id="rightContent4" style="display: none;">
+                                <div class="rightcont">
+                                    <div class="righttop">
+                                        <ul id="righttop">
+                                            <li style="text-decoration: underline;">Paid</li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightmiddle">
+                                        <ul id="rightmiddleul">
+                                            <li>
+                                                <img src="Images/dropcourse1.jpeg">
+                                                JavaScript Fundamentals
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse2.jpeg">
+                                                Data Analytics Course-Beginners
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse4.jpeg">
+                                                Java Programming for Beginners
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse3.jpeg">
+                                                Data Science With Generative AI Course
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse5.jpeg">
+                                                Front-End Development with React
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightbottom">
+                                        <a href="#" style="color: #ff6900; text-decoration: underline;">All Courses <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rightdetails" id="rightContent5" style="display: none;">
+                                <div class="rightcont">
+                                    <div class="righttop">
+                                        <ul id="righttop">
+                                            <li style="text-decoration: underline;">Paid</li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightmiddle">
+                                        <ul id="rightmiddleul">
+                                            <li>
+                                                <img src="Images/dropcourse3.jpeg">
+                                                Introduction to Business Analytics
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse2.jpeg">
+                                                Digital Transformation Strategies
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse1.jpeg">
+                                                E-commerce and Online Business
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse4.jpeg">
+                                                Cybersecurity for Business Managers
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse5.jpeg">
+                                                IT Strategy and Governance
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse3.jpeg">
+                                                Emerging Technologies in Business
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightbottom">
+                                        <a href="#" style="color: #ff6900; text-decoration: underline;">All Courses <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rightdetails" id="rightContent6" style="display: none;">
+                                <div class="rightcont">
+                                    <div class="righttop">
+                                        <ul id="righttop">
+                                            <li style="text-decoration: underline;">Paid</li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightmiddle">
+                                        <ul id="rightmiddleul">
+                                            <li>
+                                                <img src="Images/dropcourse4.jpeg">
+                                                Medical Terminology and Anatomy
+                                            </li>
+                                            <li>
+                                                <img src="Images/dropcourse3.jpeg">
+                                                Epidemiology and Health
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="rightbottom">
+                                        <a href="#" style="color: #ff6900; text-decoration: underline;">All Courses <i class="fa-solid fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Other menu items -->
+            <a href="#">Online Degree</a>
+            <a href="#">PW Skills Lab</a>
+            <a href="#">Job Portal</a>
+            <a href="#">Experience Portal</a>
+            <a href="#">Become an affiliate</a>
+            <a href="#">Hall of Fame</a>
+            <a href="#" class="Login-btn">Login</a>
+        </div>
+    </div>
+</div>
+
+    <!-- ----------------------Banner------------------------  -->
+    <section class="home-section">
+        <div class="container">
+            <div class="col-1">
+                <h1>Accelerate Your Career Growth  <br>& <span>Upskill Yourself</span></h1>
+                <p>World-Class Certification & Degree Programs</p>
+                <div class="text-wrapper">
+                    <div class="box b1">10 Million Learners</div>
+                    <div class="box b2">4.8/5 Learner's Rating</div>
+                    <div class="box b3">500% Highest Salary Hike</div>
+                </div>
+                <a class="btn">Explore Courses</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- -----------------------EY review--------------------------------- -->
+
+    <section id="home-feature" class="home-feature">
+        <div class="container">
+            <div class="home-ey-review">
+                <div class="result-review-left">
+                    <p>Process Advisors</p>
+                    <img src="Images/ey-rating.svg" width="126px" height="60px" alt="EY Rating">
+                </div>
+                <div class="result-review-right">
+                    <div class="home-ey-review-carousel">
+                        <div class="slick-list">
+                            <div class="slick-track">
+                                <div class="home-ey-review-carousel-item slick-active">
+                                    <p><strong>95%</strong> learner satisfaction score post completion of the program*</p>
+                                </div>
+                                <div class="home-ey-review-carousel-item">
+                                    <p><strong>500%</strong> salary hike received by a working professional post completion of the course*</p>
+                                </div>
+                                <div class="home-ey-review-carousel-item">
+                                    <p>Fresher earned <strong>30 LPA</strong> salary package on completion of the course*</p>
+                                </div>
+                                <div class="home-ey-review-carousel-item">
+                                    <p><strong>53%</strong> of learners received 50% and above salary hike post completion of the program*</p>
+                                </div>
+                                <div class="home-ey-review-carousel-item">
+                                    <p><strong>85%</strong> of the learners achieved their training objectives within 9 months of course completion*</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="ey-review-prev"><i class="fa-solid fa-circle-chevron-left"></i></button>
+                        <button class="ey-review-next"><i class="fa-solid fa-circle-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="home-feature-wrapper">
+                <div class="col-ls-4">
+                    <div class="home-key-feature-wrapper">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span> World-Class Instructors</span>
+                    </div>
+                </div>
+                <div class="col-ls-4">
+                    <div class="home-key-feature-wrapper">
+                        <i class="fa-solid fa-people-carry-box"></i>
+                        <span>1:1 with industary mentors</span>
+                    </div>
+                </div>
+                <div class="col-ls-4">
+                    <div class="home-key-feature-wrapper">
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>400+ Global Hiring Partners</span>
+                    </div>
+                </div>
+                <div class="col-ls-4">
+                    <div class="home-key-feature-wrapper">
+                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+                        <span>55% Avg. Salary Hike</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ---------------------------------slide effect---------------------------------------- -->
+
+   <section id="home-collaboration">
+    <div class="container">
+        <p>Programs in Collaboration with world's top Universities & MNC's</p>
+    </div>
+    <div class="university-logo">
+        <div class="university-logo-slider">
+            <img src="Images/02-IIT_Guwahati.webp">
+            <img src="Images/04-MNIT-Jaipur.webp">
+            <img src="Images/06-Nasscom.webp">
+            <img src="Images/09-IIBA.webp">
+            <img src="Images/12-CompTIA.webp">
+            <img src="Images/Bilhan.webp">
+            <img src="Images/IIT-Jammu-bottom-logo.webp">
+            <img src="Images/IU-University-logo-for-header.webp">
+            <img src="Images/Microsoft.webp">
+            <img src="Images/MIT-IDSS.webp">
+            <img src="Images/IIT-Roorkee-Home-Page.webp">
+            <img src="Images/Liverpool.webp">
+            <img src="Images/MIT-IDSS.webp">
+            <img src="Images/VNIT-Nagpur.webp">
+            <img src="Images/Rotman-home.webp">
+        </div>
+    </div>
+   </section> 
+
+<!-- -------------------------------------Explore Our Categories------------------------------- -->
+<section id="explore-categories">
+    <div class="container">
+        <h1>Explore Our Categories</h1>
+        <p>Discover Your Passion</p>
+        <div class="container-1">
+            <div class="box-1">
+                <div class="upper-section">
+                    <div class="text-content">
+                        <h4>Data Science & Analytics</h4>
+                        <p>Become expert at drawing intelligence from
+                             data and get noticed by top companies</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="Images/data-science.svg" alt="Image 1">
+                    </div>
+                </div>
+                <div class="lower-section">
+                    <span>Know More</span>
+                    <span class="arrow"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="upper-section">
+                    <div class="text-content">
+                        <h4>Software Development Course</h4>
+                        <p>Upskill in-demand software & technology
+                             skills to attain desired jobs</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="Images/software-development.svg" alt="Image 2">
+                    </div>
+                </div>
+                <div class="lower-section">
+                    <span>Know More</span>
+                    <span class="arrow"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="upper-section">
+                    <div class="text-content">
+                        <h4>Banking & Finance</h4>
+                        <p>Up-skill yourself with relevant
+                         courses to become job ready in Banking & Finance world</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="Images/Banking.svg" alt="Image 3">
+                    </div>
+                </div>
+                <div class="lower-section">
+                    <span>Know More</span>
+                    <span class="arrow"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="upper-section">
+                    <div class="text-content">
+                        <h4>Programming Courses</h4>
+                        <p>Build strong coding foundations 
+                        for a high-paying technology career</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="Images/programming-c.svg" alt="Image 4">
+                    </div>
+                </div>
+                <div class="lower-section">
+                    <span>Know More</span>
+                    <span class="arrow"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="upper-section">
+                    <div class="text-content">
+                        <h4>Business Technology</h4>
+                        <p>Explore the vast area of new categories
+                         under Business Technology</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="Images/Business-t.svg" alt="Image 5">
+                    </div>
+                </div>
+                <div class="lower-section">
+                    <span>Know More</span>
+                    <span class="arrow"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                </div>
+            </div>
+            <div class="box-1">
+                <div class="upper-section">
+                    <div class="text-content">
+                        <h4>PW School of Healthcare</h4>
+                        <p>Explore the vast sector of Healthcare
+                         by Joining our Degree & Diploma Programs.</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="Images/pw-school-health.svg" alt="Image 6">
+                    </div>
+                </div>
+                <div class="lower-section">
+                    <span>Know More</span>
+                    <span class="arrow"><i class="fa-solid fa-circle-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ----------------------Our Services--------------------------- -->
+<section id="course-sections">
+    <div class="container">
+        <h1>Discover Our Courses</h1>
+        <div class="course-header">
+            <h4>Data Science & Analytics</h4>
+            <p>View All</p>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="moveCarousel(-1)"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track">
+                    <!-- First 6 course boxes -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-1.webp" alt="University Logo">
+                            <div class="note"><p>IIT Bangalore</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Placement Assistance</p>
+                            <h2>Post Graduate Programme in Data Science & AI</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Executive PG Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>12 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Python Bootcamp</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example of another course-box -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-2.webp" alt="University Logo">
+                            <div class="note"><p>IIT Delhi</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Internship Opportunities</p>
+                            <h2>Advanced Diploma in Machine Learning</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Diploma Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>9 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Hands-on Projects</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example of another course-box -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-3.webp" alt="University Logo">
+                            <div class="note"><p>Stanford University</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Career Support</p>
+                            <h2>Professional Certificate in Data Science</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Professional Certificate</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>6 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Data Analysis Skills</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example of another course-box -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-4.webp" alt="University Logo">
+                            <div class="note"><p>MIT</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Global Learning</p>
+                            <h2>Online Master's in Computer Science</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Master's Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>2 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Advanced Topics</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example of another course-box -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-5.webp" alt="University Logo">
+                            <div class="note"><p>Harvard University</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Leadership Training</p>
+                            <h2>Executive Education in Business Analytics</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Executive Education</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>3 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Case Studies</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example of another course-box -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-6.webp" alt="University Logo">
+                            <div class="note"><p>University of Oxford</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Research Opportunities</p>
+                            <h2>PhD in Computer Science</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Doctoral Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>4-6 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Thesis Research</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat this block for each course-box -->
+                </div>
+            </div>
+            <button class="carousel-button next" onclick="moveCarousel(1)"><i class="fa-solid fa-circle-chevron-right"></i></button>
+        </div>
+        <div class="course-header">
+            <h4>Study Abroad Programs</h4>
+            <p>View All</p>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="moveCarousel(-1)"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track">
+                    <!-- Course Box 1 -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-7.webp" alt="University Logo">
+                            <div class="note"><p>University of Toronto</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>International Experience</p>
+                            <h2>Exchange Program in Business Administration</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Exchange Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>1 Semester</li>
+                                <li><i class="fa-regular fa-star"></i>Networking Opportunities</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Box 2 -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-8.webp" alt="University Logo">
+                            <div class="note"><p>University of Sydney</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Global Learning Experience</p>
+                            <h2>Master's in International Relations</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Master's Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>2 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Policy Analysis</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Box 3 -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-9.webp" alt="University Logo">
+                            <div class="note"><p>ETH Zurich</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Research and Innovation</p>
+                            <h2>PhD in Computer Science</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Doctoral Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>4-5 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Cutting-edge Research</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Box 4 -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-10.webp" alt="University Logo">
+                            <div class="note"><p>London School of Economics</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Economics and Policy</p>
+                            <h2>Executive Master's in Public Policy</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Executive Master's</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>18 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Policy Implementation</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Box 5 -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-11.webp" alt="University Logo">
+                            <div class="note"><p>University of Tokyo</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Cultural Exchange</p>
+                            <h2>Bachelor's in Japanese Studies</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Bachelor's Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>4 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Language Proficiency</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Box 6 -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-12.webp" alt="University Logo">
+                            <div class="note"><p>University of Cambridge</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Advanced Studies</p>
+                            <h2>PhD in Biochemistry</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Doctoral Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>3-4 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Research Excellence</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Box 7 -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-13.webp" alt="University Logo">
+                            <div class="note"><p>University of Melbourne</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Health Sciences</p>
+                            <h2>Master's in Public Health</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Master's Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>1.5 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Health Policy</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat this block for each course-box -->
+                </div>
+            </div>
+            <button class="carousel-button next" onclick="moveCarousel(1)"><i class="fa-solid fa-circle-chevron-right"></i></button>
+        </div>
+        <div class="course-header">
+            <h4>Information Technology</h4>
+            <p>View All</p>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="moveCarousel(-1)"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track">
+                    <!-- Course Boxes -->
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-2.webp" alt="University Logo">
+                            <div class="note"><p>IIT Delhi</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Internship Opportunities</p>
+                            <h2>Advanced Diploma in Machine Learning</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Diploma Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>9 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Hands-on Projects</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-1.webp" alt="University Logo">
+                            <div class="note"><p>IIT Bangalore</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Placement Assistance</p>
+                            <h2>Post Graduate Programme in Data Science & AI</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Executive PG Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>12 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Python Bootcamp</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-3.webp" alt="University Logo">
+                            <div class="note"><p>Stanford University</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Career Support</p>
+                            <h2>Professional Certificate in Data Science</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Professional Certificate</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>6 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Data Analysis Skills</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-4.webp" alt="University Logo">
+                            <div class="note"><p>MIT</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Global Learning</p>
+                            <h2>Online Master's in Computer Science</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Master's Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>2 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Advanced Topics</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-5.webp" alt="University Logo">
+                            <div class="note"><p>Harvard University</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Leadership Training</p>
+                            <h2>Executive Education in Business Analytics</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Executive Education</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>3 Months</li>
+                                <li><i class="fa-regular fa-star"></i>Case Studies</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-6.webp" alt="University Logo">
+                            <div class="note"><p>University of Oxford</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Research Opportunities</p>
+                            <h2>PhD in Computer Science</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>Doctoral Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>4-6 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Thesis Research</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="course-box">
+                        <div class="course-image">
+                            <img src="Images/course-college-7.webp" alt="University Logo">
+                            <div class="note"><p>London School of Economics</p></div>
+                        </div>
+                        <div class="course-details">
+                            <p>Business and Economics</p>
+                            <h2>MBA in International Business</h2>
+                            <ul class="course-features">
+                                <li><i class="fa-solid fa-award"></i>MBA Program</li>
+                                <li><i class="fa-regular fa-calendar-days"></i>2 Years</li>
+                                <li><i class="fa-regular fa-star"></i>Global Networking</li>
+                            </ul>
+                            <div class="course-buttons">
+                                <button class="btn btn-apply">Apply Now</button>
+                                <button class="btn btn-details">More Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next" onclick="moveCarousel(1)"><i class="fa-solid fa-circle-chevron-right"></i></button>
+        </div>        
+    </div>
+</section>
+<!-- ------------------------parallex---------------------------- -->
+    <section>
+        <div id="parallax-1" class="parallax-item">
+            <div class="content-container">
+                <div class="text-details">
+                    <header class="text-header">
+                        <h1 class="text-heading">Dedicated Placement <br> Assistance</h1>
+                        <p class="text-subheading">Empower your career journey and enhance your abilities with <br>job-focused courses</p>
+                    </header>
+                    <div class="circle">
+                        <div class="circle-content">
+                            <h3>“Your</h3>
+                            <h3>Career</h3>
+                            <h3>Our Mission”</h3>
+                        </div>
+                    </div>
+                    <figure class="company-logos">
+                        <img src="Images/amazon-logo.svg" alt="Amazon logo">
+                        <img src="Images/google-logo.svg" alt="Google logo">
+                        <img src="Images/walmart-logo.svg" alt="Walmart logo">
+                    </figure>
+                    <figure class="company-logos">
+                        <img src="Images/microsoft-logo.svg" alt="Microsoft logo">
+                        <img src="Images/linkedin-logo.svg" alt="LinkedIn logo">
+                    </figure>
+                    <p class="more-text"> & more...</p>
+                    <div class="button-group">
+                        <button class="btn-explore">Explore<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <p class="skip">Skip<i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <figure class="background-image">
+                    <img src="Images/parallex-one.png" alt="bannerImage">
+                </figure>
+            </div>
+        </div>
+        <div id="parallax-2" class="parallax-item">
+            <div class="content-container">
+                <div class="text-details">
+                    <header class="text-header">
+                        <h1 class="text-heading">Industry-Focused Curriculum</h1>
+                        <p class="text-subheading">Learn, upskill and unleash your potential to become a <br> market-ready professional!</p>
+                    </header>
+                    <div class="circle">
+                        <div class="circle-content">
+                            <h3>“Market-Read</h3>
+                            <h3>Skills At Your</h3>
+                            <h3>Fingertips”</h3>
+                        </div>
+                    </div>
+                    <div class="course-project">
+                        <p>100+ Hrs <br><span>Course</span></p>
+                        <p>430+ <br><span>Projects</span></p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn-explore">Explore<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <p class="skip">Skip<i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <figure class="background-image">
+                    <img src="Images/parallex-two.png" alt="bannerImage">
+                </figure>
+            </div>
+        </div>
+        <div id="parallax-3" class="parallax-item">
+            <div class="content-container">
+                <div class="text-details">
+                    <header class="text-header">
+                        <h1 class="text-heading">Courses For Every <br> Budget</h1>
+                        <p class="text-subheading">Find courses that fit all your needs and are available at <br> competitive prices!</p>
+                    </header>
+                    <div class="circle">
+                        <div class="circle-content">
+                            <h3>“Ensuring Your</h3>
+                            <h3>Right To Skills &</h3>
+                            <h3>Opportunities”</h3>
+                        </div>
+                    </div>
+                    <figure class="Budget">
+                        <div class="item">
+                            <img src="Images/free.svg" alt="Free">
+                            <p>Free</p>
+                        </div>
+                        <div class="item">
+                            <img src="Images/premium.svg" alt="Premium">
+                            <p>Premium</p>
+                        </div>
+                        <div class="item">
+                            <img src="Images/pocket-freindly.svg" alt="Pocket-Friendly">
+                            <p>Pocket</p>
+                        </div>
+                    </figure>
+                    <div class="button-group">
+                        <button class="btn-explore">Explore<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <p class="skip">Skip<i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <figure class="background-image">
+                    <img src="Images/parallex-three.png" alt="bannerImage">
+                </figure>
+            </div>
+        </div>
+        <div id="parallax-4" class="parallax-item">
+            <div class="content-container">
+                <div class="text-details">
+                    <header class="text-header">
+                        <h1 class="text-heading">Top-Notch Experts For <br> Every Domain</h1>
+                        <p class="text-subheading">Be it Tech, Business, or Finance –<br>
+                            receive guidance and support at  <br>
+                            every step!</p>
+                    </header>
+                    <div class="circle">
+                        <div class="circle-content">
+                            <h3>“We Support The</h3>
+                            <h3>Path You</h3>
+                            <h3>Choose”</h3>
+                        </div>
+                    </div>
+                    <figure class="Budget">
+                        <div class="item">
+                            <img src="Images/software-development.svg" alt="Software Engineering">
+                            <p>Software <br> Engineering</p>
+                        </div>
+                        <div class="item">
+                            <img src="Images/Banking.svg" alt="Banking Finance">
+                            <p>Banking <br> Finance</p>
+                        </div>
+                        <div class="item">
+                            <img src="Images/data-analytics.svg" alt="Data Analytics">
+                            <p>Data <br> Analytics</p>
+                        </div>
+                    </figure>
+                    <p class="more-text"> & more...</p>
+                    <div class="button-group">
+                        <button class="btn-explore">Explore<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <p class="skip">Skip<i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <figure class="background-image">
+                    <img src="Images/parallex-four.png" alt="bannerImage">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+<!-- ------------------------- Launchpad--------------------------- -->
+
+<section id="Launchpad">
+   <div class="container">
+    <div class="Launchpad">
+        <header>
+            <h1>Your Launchpad to Learning</h1>
+            <a href="">View All  <i class="fa-solid fa-arrow-right"></i></a>
+        </header>
+        <div class="subheader">
+            <p>Essential Skills, Zero Cost</p>
+        </div>
+        <div class="launch_courses">
+            <a href="">Banking & Finance</a>
+            <a href="">Software Development Courses</a>
+            <a href="">Software & Tech Workshop</a>
+        </div>
+        <div class="newcourses">
+            <div class="newcourses-box">
+                <div class="pwskills">PWGift</div>
+                <div class="launch-img">
+                    <img src="Images/Launchpad1.jpeg" alt="Launchpad Image">
+                </div>
+                <div class="launch-data">
+                   <header>
+                     <h3>System Design Workshop </h3>
+                     <p><i class="fa-solid fa-share"></i></p>
+                    </header>
+                    <p>Explore the concepts of System Design</p>
+                    <h5>Free</h5>
+                </div>
+                <div class="launch-buttons">
+                    <a href="#" class="btn-explore2">Explore</a>
+                    <a href="#" class="btn-enroll">Enroll_Now</a>
+                </div>
+            </div>
+            <div class="newcourses-box">
+                <div class="pwskills">PWGift</div>
+                <div class="launch-img">
+                    <img src="Images/Launchpad2.jpeg" alt="Launchpad Image">
+                </div>
+                <div class="launch-data">
+                   <header>
+                    <h3>Machine Learning Fundamentals</h3>
+                    <p><i class="fa-solid fa-share"></i></p>
+                </header>
+                <p>Master the fundamentals of Machine Learning</p>
+                    <h5>Free</h5>
+                </div>
+                <div class="launch-buttons">
+                    <a href="#" class="btn-explore2">Explore</a>
+                    <a href="#" class="btn-enroll">Enroll_Now</a>
+                </div>
+            </div>
+            <div class="newcourses-box">
+                <div class="pwskills">PWGift</div>
+                <div class="launch-img">
+                    <img src="Images/Launchpad3.jpeg" alt="Launchpad Image">
+                </div>
+                <div class="launch-data">
+                   <header>
+                    <h3>Data Science Essentials</h3>
+                    <p><i class="fa-solid fa-share"></i></p>
+                </header>
+                 <p>Learn the essentials of Data Science</p>
+                    <h5>Free</h5>
+                </div>
+                <div class="launch-buttons">
+                    <a href="#" class="btn-explore2">Explore</a>
+                    <a href="#" class="btn-enroll">Enroll_Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</section>
+
+<!-- -----------------------Ecosystem----------------------- -->
+<section id="Ecosystem">
+    <div class="container">
+        <div class="ecosystem">
+            <header>
+                <h1>Explore Our Ecosystem</h1>
+            </header>
+            <div class="subheader">
+                <p>A one-stop destination for all your learning to placement needs</p>
+            </div>
+            <div class="ecosystem-content">
+                <div class="ecosystem-box">
+                    <div class="column first-column">
+                        <div class="eco-box eco-box1">
+                            <img src="Images/eco-products-icon1.png" alt="PW Skills Lab">
+                            <h2>PW Skills Lab</h2>
+                            <p>Buying a new PC is no longer required, Access unlimited computing power!</p>
+                            <button>Explore <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="eco-box eco-box2">
+                            <img src="Images/eco-products-icon2.png" alt="PW Skills Lab">
+                            <h2>PW Skills Lab</h2>
+                            <p>Buying a new PC is no longer required, Access unlimited computing power!</p>
+                            <button>Explore <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="eco-box eco-box3">
+                            <img src="Images/eco-products-icon3.png" alt="PW Skills Lab">
+                            <h2>PW Skills Lab</h2>
+                            <p>Buying a new PC is no longer required, Access unlimited computing power!</p>
+                            <button>Explore <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="column second-column">
+                        <div class="eco-box eco-box4">
+                            <img src="Images/eco-products-icon4.png" alt="PW Skills Lab">
+                            <h2>PW Skills Lab</h2>
+                            <p>Buying a new PC is no longer required, Access unlimited computing power!</p>
+                            <button>Explore <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="eco-box eco-box5">
+                            <img src="Images/eco-products-icon5.png" alt="PW Skills Lab">
+                            <h2>PW Skills Lab</h2>
+                            <p>Buying a new PC is no longer required, Access unlimited computing power!</p>
+                            <button>Explore <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecosystem-gif">
+                    <img src="Images/Ecosystem.gif" alt="Ecosystem GIF">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----------------------Success stories---------------------- -->
+
+<section id="success-stories">
+    <div class="container">
+        <header>
+            <h1>Success Stories</h1>
+            <a href="">View All  <i class="fa-solid fa-arrow-right"></i></a>
+        </header>
+        <div class="stories">
+            <div class="job-story">
+                <div class="job-story-top">
+                    <p>Cracked First Job</p>
+                </div>
+                <div class="job-story-bottom">
+                    <div class="job-story-header">
+                        <div class="job-story-img">
+                            <img src="Images/user-2.png" width="50px" alt="">
+                        </div>
+                        <div class="job-story-info">
+                            <h3>David Jones</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="job-story-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quas soluta excepturi sit.
+                        Ab sed distinctio vel, beatae illo fugiat provident consectetur vero tempore assumenda saepe
+                        reprehenderit unde ex facilis repellendus.
+                    </div>
+                    <div class="job-story-path">
+                        <div class="job-story-from">
+                            <h3>From</h3>
+                            <span>Fresher</span>
+                        </div>
+                        <div class="job-story-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="job-story-to">
+                            <h3>To</h3>
+                            <span><img width="70px" src="Images/story-4.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Story 2 -->
+            <div class="job-story">
+                <div class="job-story-top">
+                    <p>Promotion</p>
+                </div>
+                <div class="job-story-bottom">
+                    <div class="job-story-header">
+                        <div class="job-story-img">
+                            <img src="Images/user-1.png" width="50px" alt="">
+                        </div>
+                        <div class="job-story-info">
+                            <h3>John Doe</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="job-story-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quas soluta excepturi sit.
+                        Ab sed distinctio vel, beatae illo fugiat provident consectetur vero tempore assumenda saepe
+                        reprehenderit unde ex facilis repellendus.
+                    </div>
+                    <div class="job-story-path">
+                        <div class="job-story-from">
+                            <h3>From</h3>
+                            <span>Jr Developer</span>
+                        </div>
+                        <div class="job-story-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="job-story-to">
+                            <h3>To</h3>
+                            <span><img width="70px" src="Images/story-3.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Story 3 -->
+            <div class="job-story">
+                <div class="job-story-top">
+                    <p>Changed Career</p>
+                </div>
+                <div class="job-story-bottom">
+                    <div class="job-story-header">
+                        <div class="job-story-img">
+                            <img src="Images/user-3.png" width="50px" alt="">
+                        </div>
+                        <div class="job-story-info">
+                            <h3>Jane Smith</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="job-story-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quas soluta excepturi sit.
+                        Ab sed distinctio vel, beatae illo fugiat provident consectetur vero tempore assumenda saepe
+                        reprehenderit unde ex facilis repellendus.
+                    </div>
+                    <div class="job-story-path">
+                        <div class="job-story-from">
+                            <h3>From</h3>
+                            <span>Teacher</span>
+                        </div>
+                        <div class="job-story-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="job-story-to">
+                            <h3>To</h3>
+                            <span><img width="70px" src="Images/story-2.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Story 4 -->
+            <div class="job-story">
+                <div class="job-story-top">
+                    <p>Entrepreneurship</p>
+                </div>
+                <div class="job-story-bottom">
+                    <div class="job-story-header">
+                        <div class="job-story-img">
+                            <img src="Images/user-1.png" width="50px" alt="">
+                        </div>
+                        <div class="job-story-info">
+                            <h3>Mary Johnson</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="job-story-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum quas soluta excepturi sit.
+                        Ab sed distinctio vel, beatae illo fugiat provident consectetur vero tempore assumenda saepe
+                        reprehenderit unde ex facilis repellendus.
+                    </div>
+                    <div class="job-story-path">
+                        <div class="job-story-from">
+                            <h3>From</h3>
+                            <span>Engineer</span>
+                        </div>
+                        <div class="job-story-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="job-story-to">
+                            <h3>To</h3>
+                            <span><img width="70px" src="Images/story-1.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- -----------------------FAQ--------------------------------- -->
+
+<section id="FAQ">
+    <div class="container">
+        <header>
+            <h1>Frequently Asked Questions</h1>
+        </header>
+        <div class="container-faq">
+            <div class="faq-left">
+                <ul>
+                    <li onclick="toggleAnswer(1)">
+                        <header>
+                            <p>What is the refund policy?</p>
+                            <a><i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </header>
+                    </li>
+                    <li onclick="toggleAnswer(2)">
+                        <header>
+                            <p>I need to purchase a course. Whom should I contact?</p>
+                            <a><i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </header>
+                    </li>
+                    <li onclick="toggleAnswer(3)">
+                        <header>
+                            <p>I am not able to view my enrolled course. What to do?</p>
+                            <a ><i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </header>
+                    </li>
+                    <li onclick="toggleAnswer(4)">
+                        <header>
+                            <p>What is an ecperience portal? How to use it?</p>
+                            <a><i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </header>
+                    </li>
+                    <li onclick="toggleAnswer(5)">
+                        <header>
+                            <p>How to get Placement and Job assistance?</p>
+                            <a><i class="fa-solid fa-circle-arrow-right"></i></a>
+                        </header>
+                    </li>
+                </ul>
+            </div>
+            <div class="faq-right">
+                <div id="answer1" class="answer">
+                    PW Skills operates a strict no-refunds policy for all purchased paid courses. Once a course purchase is confirmed, payment cannot be refunded. This policy applies to all courses, irrespective of the price, duration or the learner's progress within the course.to discover, and new TV shows and movies are added every week!
+                </div>
+                <div id="answer2" class="answer">
+                    Contact our counselors through the chat support on our website. Look for the chat option on the bottom right of the Homepage. Name the course you’re interested in, and the counseling team will guide you through the admission process.
+                </div>
+                <div id="answer3" class="answer">
+                    To access your enrolled course, ensure you have logged in at learn.pwskills.com. If the course is still not visible, email your payment receipt to support@pwskills.com for assistance within 24 hours.
+                </div>
+                <div id="answer4" class="answer">
+                    Our experience portal offers real-time industrial projects for students and professionals. These unpaid, remote, and self-paced internships provide valuable experience. Choose and complete as many projects as you like to receive an internship experience letter. Students as well as working professionals can do these internships.
+                </div>
+                <div id="answer5" class="answer">
+                    Placements and Assistance: Enroll in our Job Assistance courses, inclusive of resume building, mock interviews, job referrals, and job opportunities for eligible candidates. Or join our Job Readiness courses, which include resume building, mock interviews, and job alerts (job opportunity not included)
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- -----------------------footer------------------------------- -->
+<section id="footer">
+    <div class="footer">
+        <div class="footervertipart">
+            <img src="Images/logo.png" style="background-color: white;" width="150">
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class='fa-brands fa-twitter'></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class='fa-brands fa-youtube'></i>
+            </div>
+            <div class="app-logo">
+                <img src="Images/play-store.png">
+                <img src="Images/app-store.png">
+            </div>
+        </div>
+        <div class="footervertipart">
+            <h3>Analytics Courses</h3>
+            <ul>
+                <li><a href="#">Data Science Course</a></li>
+                <li><a href="#">Artificial Intelligence Course</a></li>
+                <li><a href="#">Data Analytics Course</a></li>
+                <li><a href="#">Machine Learning Course</a></li>
+                <li><a href="#">Python Data Science Course</a></li>
+                <li><a href="#">Business Analytics Course</a></li>
+                <li><a href="#">Python Course</a></li>
+            </ul>
+        </div>
+        <div class="footervertipart">
+            <h3>Cloud Courses</h3>
+            <ul>
+                <li><a href="#">Azure Course</a></li>
+                <li><a href="#">DevOps Course</a></li>
+                <li><a href="#">Cyber Security Course</a></li>
+                <li><a href="#">AWS Solutions Architect</a></li>
+                <li><a href="#">Salesforce Course</a></li>
+                <li><a href="#">Selenium Course</a></li>
+                <li><a href="#">AWS DevOps Course</a></li>
+                <li><a href="#">Cloud Computing Courses</a></li>
+            </ul>
+        </div>
+        <div class="footervertipart">
+            <h3>Trending Courses</h3>
+            <ul>
+                <li><a href="#">Ethical Hacking Course</a></li>
+                <li><a href="#">Power BI Course</a></li>
+                <li><a href="#">Informatica Course</a></li>
+                <li><a href="#">Digital Marketing Course</a></li>
+                <li><a href="#">Business Analyst Course</a></li>
+                <li><a href="#">Investment Banking Course</a></li>
+                <li><a href="#">Azure DevOps Course</a></li>
+                <li><a href="#">Azure Data Engineer Course</a></li>
+            </ul>
+        </div>
+        <div class="footervertipart">
+            <h3>Popular Courses</h3>
+            <ul>
+                <li><a href="#">Electric Vehicle Course</a></li>
+                <li><a href="#">UI UX Design Course</a></li>
+                <li><a href="#">SQL Course</a></li>
+                <li><a href="#">Tableau Course</a></li>
+                <li><a href="#">Full Stack Developer Course</a></li>
+                <li><a href="#">Data Engineering Course</a></li>
+                <li><a href="#">Supply Chain Management Course</a></li>
+                <li><a href="#">General Management Course</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="footerhoripart">
+            <h3>Browse By Domains</h3>
+            <ul>
+                <li><a href="#">Data Science Courses</a></li>
+                <li><a href="#">Big Data Analytics Courses</a></li>
+                <li><a href="#">Business Intelligence Courses</a></li>
+                <li><a href="#">Salesforce Courses</a></li>
+                <li><a href="#">Cloud Computing Courses</a></li>
+                <li><a href="#">Digital Marketing Courses</a></li>
+                <li><a href="#">AI & Machine Learning Courses</a></li>
+                <li><a href="#">Programming Courses</a></li>
+                <li><a href="#">Database Courses</a></li>
+                <li><a href="#">Project Management Courses</a></li>
+                <li><a href="#">Cyber Security and Ethical Hacking Courses</a></li>
+                <li><a href="#">Web Development Courses</a></li>
+                <li><a href="#">Software Testing Courses</a></li>
+                <li><a href="#">Automation Courses</a></li>
+                <li><a href="#">Salesforce Courses</a></li>
+                <li><a href="#">Cloud Computing Courses</a></li>
+                <li><a href="#">Job Oriented Courses</a></li>
+                <li><a href="#">Database Courses</a></li>
+                <li><a href="#">Programming Courses</a></li>
+                <li><a href="#">Degree Courses</a></li>
+            </ul>
+        </div>
+        <div class="footerhoripart">
+            <h3>Degree Program</h3>
+            <ul>
+                <li><a href="#">Online M Tech in AI & ML</a></li>
+                <li><a href="#">Masters degree in Data Science</a></li>
+                <li><a href="#">MBA Big Data Management</a></li>
+                <li><a href="#">Masters degree in Artificial Intelligence</a></li>
+                <li><a href="#">Global MBA</a></li>
+                <li><a href="#">MBA in International Marketing</a></li>
+                <li><a href="#">Masters in Computer Science</a></li>
+                <li><a href="#">MBA in Finance and Accounting</a></li>
+                <li><a href="#">Masters in Engineering Management</a></li>
+                <li><a href="#">MSc in Data Science</a></li>
+                <li><a href="#">Masters in Information Technology</a></li>
+                <li><a href="#">M.Tech in Applied AI</a></li>
+            </ul>
+        </div>
+        <div class="footerhoripart">
+            <h3>Popular Tutorials</h3>
+            <ul>
+                <li><a href="#">Data Science Tutorials</a></li>
+                <li><a href="#">Machine Learning Tutorials</a></li>
+                <li><a href="#">Cyber Security Tutorials</a></li>
+                <li><a href="#">Salesforce Tutorials</a></li>
+                <li><a href="#">AWS Tutorials</a></li>
+                <li><a href="#">Azure Tutorials</a></li>
+                <li><a href="#">SQL Tutorials</a></li>
+                <li><a href="#">Selenium Tutorials</a></li>
+                <li><a href="#">Ethical Hacking Tutorials</a></li>
+                <li><a href="#">Artificial Intelligence Tutorials</a></li>
+            </ul>
+        </div>
+        <div class="footerhoripart">
+            <h3>Popular Resources</h3>
+            <ul>
+                <li><a href="#">Data Science</a></li>
+                <li><a href="#">Machine Learning</a></li>
+                <li><a href="#">AWS</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Cyber Security</a></li>
+                <li><a href="#">Artificial Intelligence</a></li>
+                <li><a href="#">DevOps</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">UI UX Design</a></li>
+                <li><a href="#">Ethical Hacking</a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="Copyright"><i class="fa-solid fa-copyright"></i>Copyright to StudyHub & Rushi</p>
+</section>
+
+
+
+<!-- --------------------javascript-------------------------- -->
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
